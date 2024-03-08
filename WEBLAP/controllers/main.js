@@ -3,7 +3,7 @@ let loggedOutMenu = document.querySelector('#LoggedOutMenu');
 
 async function render(view) {
     const main = document.querySelector("main");
-    main.innerHTML = await (await fetch(`Views/${view}.html`)).text();
+    main.innerHTML = await (await fetch(`views/${view}.html`)).text();
 }
 
 
@@ -22,5 +22,5 @@ if (loggedUser != null){
 }else{
     loggedInMenu.classList.add('d-none');
     loggedOutMenu.classList.remove('d-none');
-    render('loginregister');
+    render('welcome');
 }
